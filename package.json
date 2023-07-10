@@ -10,7 +10,8 @@
   },
   "scripts": {
     "start": "npx serve $WORKSPACE/app",
-    "test": "./scripts/test.sh"
+    "test": "./scripts/test.sh",
+    "ci": "start-server-and-test start-server http://localhost:3000 test"
   },
   "devDependencies": {
     "jasmine-core": "^4.1.0",
