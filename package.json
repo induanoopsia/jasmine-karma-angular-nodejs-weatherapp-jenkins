@@ -9,8 +9,8 @@
     "url": "git://github.com/atufkas/angular-openweather-app.git"
   },
   "scripts": {
-    "start": "npx serve app",
-    "test": "scripts/all-tests.sh"
+    "start": "npx serve $WORKSPACE/app",
+    "test": "./scripts/test.sh"
   },
   "devDependencies": {
     "jasmine-core": "^4.1.0",
