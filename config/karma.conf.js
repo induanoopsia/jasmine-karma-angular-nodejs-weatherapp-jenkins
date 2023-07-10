@@ -34,12 +34,19 @@ module.exports = function(config) {
       suite: 'unit'
     },
 
-    customLaunchers: {
-      chrome_without_security: {
-        base: 'Chrome',
-        flags: ['--disable-web-security']
-      }
-    },
+    process.env.CHROME_BIN = require('puppeteer').executablePath();
+        browsers: ['ChromeHeadlessNoSandbox'],
+        customLaunchers: {
+            ChromeHeadlessNoSandbox: {
+                base: 'ChromeHeadless',
+                flags: [
+                    '--no-sandbox', 
+                    '--disable-gpu',
+                    '--disable-web-security'
+                ]
+            }
+        },
+
   });
 
   if (process.env.TRAVIS) {
