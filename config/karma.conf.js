@@ -32,7 +32,7 @@ module.exports = function(config) {
    // },
 
     junitReporter: {
-      outputFile: 'target/surefire-reports/TEST-*.xml',
+      outputFile: 'target/surefire-reports/*.xml',
       suite: 'unit'
     },
     
