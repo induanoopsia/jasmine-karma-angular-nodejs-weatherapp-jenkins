@@ -1,3 +1,5 @@
+process.env.CHROME_BIN = require('puppeteer').executablePath();
+
 module.exports = function(config) {
   config.set({
     basePath: '../',
@@ -33,8 +35,7 @@ module.exports = function(config) {
       outputFile: 'test-results.xml',
       suite: 'unit'
     },
-
-    process.env.CHROME_BIN = require('puppeteer').executablePath();
+    
         browsers: ['ChromeHeadlessNoSandbox'],
         customLaunchers: {
             ChromeHeadlessNoSandbox: {
