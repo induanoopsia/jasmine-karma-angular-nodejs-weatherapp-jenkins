@@ -13,9 +13,9 @@ module.exports = function(config) {
 
     autoWatch: true,
 
-    frameworks: ['jasmine'],
+    frameworks:['jasmine'],
 
-    browsers: ['Chrome'],
+    browsers: ['chrome_without_security'],
 
     plugins: [
       'karma-junit-reporter',
@@ -30,9 +30,9 @@ module.exports = function(config) {
     },
 
     customLaunchers: {
-      Chrome_travis_ci: {
+      chrome_without_security: {
         base: 'Chrome',
-        flags: ['--no-sandbox']
+        flags: ['--disable-web-security']
       }
     },
   });

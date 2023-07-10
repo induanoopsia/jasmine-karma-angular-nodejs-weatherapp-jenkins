@@ -10,9 +10,16 @@ module.exports = function(config){
 
     autoWatch : false,
 
-    browsers : ['Chrome'],
+    browsers: ['chrome_without_security'],
 
-    frameworks: ['ng-scenario'],
+    customLaunchers: {
+      chrome_without_security: {
+          base: 'Chrome',
+          flags: ['--disable-web-security']
+      }
+    },
+
+    frameworks:['ng-scenario'],
 
     singleRun : true,
 
