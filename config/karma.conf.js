@@ -26,15 +26,15 @@ module.exports = function(config) {
       'karma-jasmine'
     ],
 
-   // junitReporter: {
-   //   outputFile: 'test_out/unit.xml',
-   //   suite: 'unit'
-   // },
-
     junitReporter: {
-      outputFile: 'target/surefire-reports/*.xml',
+      outputFile: 'test_out/unit.xml',
       suite: 'unit'
     },
+
+ //   junitReporter: {
+ //     outputFile: 'target/surefire-reports/*.xml',
+  //    suite: 'unit'
+  //  },
     
         browsers: ['ChromeHeadlessNoSandbox'],
         customLaunchers: {
