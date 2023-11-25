@@ -25,9 +25,9 @@ module.exports = function(config) {
       'karma-firefox-launcher',
       'karma-jasmine'
     ],
-
+reporters = ['dots', 'junit'];
     junitReporter: {
-      outputFile: 'test_out/unit.xml',
+      outputFile: 'target/test-results.xml',
       suite: 'unit'
     },
 
