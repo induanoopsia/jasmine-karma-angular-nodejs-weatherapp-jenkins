@@ -17,7 +17,7 @@ module.exports = function(config) {
 
     frameworks:['jasmine'],
 
-    browsers: ['chrome_without_security'],
+  //  browsers: ['chrome_without_security'],
 
     plugins: [
       'karma-junit-reporter',
@@ -25,17 +25,11 @@ module.exports = function(config) {
       'karma-firefox-launcher',
       'karma-jasmine'
     ],
- reporters:['dots', 'junit'],
-    
+ 
     junitReporter: {
-      outputFile: 'target/test-results.xml',
+      outputFile: 'test_out/unit.xml',
       suite: 'unit'
     },
-
- //   junitReporter: {
- //     outputFile: 'target/surefire-reports/*.xml',
-  //    suite: 'unit'
-  //  },
     
         browsers: ['ChromeHeadlessNoSandbox'],
         customLaunchers: {
@@ -51,8 +45,8 @@ module.exports = function(config) {
 
   });
 
-  if (process.env.TRAVIS) {
-    config.browsers = ['Chrome_travis_ci'];
+  if (process.env.Jenkins) {
+    config.browsers = ['ChromeHeadlessNoSandbox'];
     config.singleRun = true;
   }
 }
