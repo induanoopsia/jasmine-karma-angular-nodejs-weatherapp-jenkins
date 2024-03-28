@@ -11,7 +11,7 @@
   "scripts": {
     "start": "npx serve $WORKSPACE/app",
     "test": "./scripts/test.sh",
-     "e2etest": "./scripts/e2e-test.sh",
+    "e2etest": "./scripts/e2e-test.sh",
     "ci": "start-server-and-test http-get://localhost:3000"
   },
   "devDependencies": {
