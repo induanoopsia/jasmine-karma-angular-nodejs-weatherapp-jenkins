@@ -1,4 +1,4 @@
-{
+e{
   "name": "angular-openweather-app",
   "description": "A weather forecast app written in AngularJS based on OpenWeatherMap API calls",
   "version": "0.1.6",
@@ -12,7 +12,7 @@
     "start": "npx serve $WORKSPACE/app",
     "test": "./scripts/test.sh",
     "e2etest": "./scripts/e2e-test.sh",
-    "ci": "start-server-and-test http-get://localhost:3000"
+    "ci": "start-server-and-e2e-test http-get://localhost:3000"
   },
   "devDependencies": {
     "jasmine-core": "^4.1.0",
