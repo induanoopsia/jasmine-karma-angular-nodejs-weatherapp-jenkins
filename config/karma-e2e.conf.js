@@ -10,14 +10,24 @@ module.exports = function(config){
 
     autoWatch : false,
 
-    browsers: ['chrome_without_security'],
-
-    customLaunchers: {
-      chrome_without_security: {
-          base: 'Chrome',
-          flags: ['--disable-web-security']
-      }
-    },
+//    browsers: ['chrome_without_security'],
+browsers: ['ChromeHeadlessNoSandbox'],
+        customLaunchers: {
+            ChromeHeadlessNoSandbox: {
+                base: 'ChromeHeadless',
+                flags: [
+                    '--no-sandbox', 
+                    '--disable-gpu',
+                    '--disable-web-security'
+                ]
+            }
+        },
+   // customLaunchers: {
+   //   chrome_without_security: {
+   //       base: 'Chrome',
+  //        flags: ['--disable-web-security']
+  //    }
+  //  },
 
     frameworks:['ng-scenario'],
 
